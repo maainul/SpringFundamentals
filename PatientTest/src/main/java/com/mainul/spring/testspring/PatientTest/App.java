@@ -15,7 +15,10 @@ public class App
     	ApplicationContext context = new ClassPathXmlApplicationContext("com/mainul/spring/testspring/PatientTest/beans/beans.xml");
     	Patient patient = (Patient)context.getBean("patient");
     	patient.speak();
-        //System.out.println( "Hello World!" );
+        
+    	System.out.println(patient);
+    	
+    	
     	((ClassPathXmlApplicationContext)context).close();
     }
 }
