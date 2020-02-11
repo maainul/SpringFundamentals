@@ -1,5 +1,6 @@
 package com.mainul.spring.testspring.PatientTest;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
@@ -10,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
+    	ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
     	Patient patient = (Patient)context.getBean("patient");
     	patient.speak();
         //System.out.println( "Hello World!" );

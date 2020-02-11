@@ -1,8 +1,8 @@
 # SpringFundamentals
 
-## Hello World
+## Create a New Project (Hello World)
 
-## Add Dependencies
+## Add Dependencies (3.2.11)
 
 ```
 <!-- spring-core which provides core functionality -->
@@ -14,6 +14,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+			<version>3.2.11.RELEASE</version>
+		</dependency>
+ 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
 			<version>3.2.11.RELEASE</version>
 		</dependency>
  
@@ -43,9 +48,14 @@
 			<version>3.2.11.RELEASE</version>
 		</dependency>
 
+```
+# Add A Class
 
+```
+public class Patient {
+	public void speak() {
+		System.out.println("Help me");
+	}
 
-
-
-
+}
 ```
