@@ -9,5 +9,12 @@
 	<constructor-arg value="5" name="id"></constructor-arg>
 	<constructor-arg value="Tom" name="nameString"></constructor-arg>
 	<property name="nationalId" value="1234"></property>
+	<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address"
+		class="com.mainul.spring.testspring.PatientTest.Address">
+	<constructor-arg name="streetString" value="Panthpath"></constructor-arg>
+	<constructor-arg name="postcodeString" value="1200"></constructor-arg>
 	</bean>
 </beans>
