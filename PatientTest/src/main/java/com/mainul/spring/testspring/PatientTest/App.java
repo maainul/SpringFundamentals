@@ -13,10 +13,13 @@ public class App
     public static void main( String[] args )
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("com/mainul/spring/testspring/PatientTest/beans/beans.xml");
-    	Patient patient = (Patient)context.getBean("patient");
-    	patient.speak();
+    	Patient patient1 = (Patient)context.getBean("patient");
     	
-    	System.out.println(patient);
+    	Patient patient2 = (Patient)context.getBean("patient");
+    	
+    	patient1.setNameString("Harry");
+    	
+    	System.out.println(patient2);
     	
     	
     	
