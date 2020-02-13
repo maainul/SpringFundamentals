@@ -8,5 +8,6 @@
 		class="com.mainul.spring.testspring.PatientTest.Patient">
 	<constructor-arg value="5" name="id"></constructor-arg>
 	<constructor-arg value="Tom" name="nameString"></constructor-arg>
+	<property name="nationalId" value="1234"></property>
 	</bean>
 </beans>

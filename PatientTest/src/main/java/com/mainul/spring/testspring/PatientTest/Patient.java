@@ -4,7 +4,7 @@ public class Patient {
 	
 	private int id;
 	private String nameString;
-	
+	private int nationalId;
 	
 	public Patient() {
 		
@@ -12,6 +12,18 @@ public class Patient {
 
 	
 	
+	public int getNationalId() {
+		return nationalId;
+	}
+
+
+
+	public void setNationalId(int nationalId) {
+		this.nationalId = nationalId;
+	}
+
+
+
 	public Patient(int id, String nameString) {
 		this.id = id;
 		this.nameString = nameString;
@@ -47,12 +59,10 @@ public class Patient {
 
 
 
-
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", nameString=" + nameString + "]";
+		return "Patient [id=" + id + ", nameString=" + nameString + ", nationalId=" + nationalId + "]";
 	}
-
 
 
 
