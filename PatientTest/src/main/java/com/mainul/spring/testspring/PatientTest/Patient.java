@@ -19,6 +19,12 @@ public class Patient {
 	public void onCreate() {
 		System.out.println("patient created :"+this);
 	}
+	
+	
+	public void onDestroy() {
+		System.out.println("patient destroyed");
+	}
+
 
 	public void setAddress(Address address) {
 		this.address = address;

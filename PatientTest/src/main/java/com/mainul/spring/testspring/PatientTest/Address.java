@@ -8,6 +8,15 @@ public class Address {
 	public Address() {
 		
 	}
+	
+	public void init() {
+		System.out.println("Address created :"+this);
+	}
+	
+	public void destroy() {
+		System.out.println("Address destroyed.");
+	}
+	
 	public Address(String streetString, String postcodeString) {
 		this.streetString = streetString;
 		this.postcodeString = postcodeString;
