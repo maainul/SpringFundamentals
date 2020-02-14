@@ -12,13 +12,18 @@ public class Patient {
 		return address;
 	}
 
+	public Patient() {
+
+	}
+	
+	public void onCreate() {
+		System.out.println("patient created :"+this);
+	}
+
 	public void setAddress(Address address) {
 		this.address = address;
 	}
 
-	public Patient() {
-
-	}
 
 	public int getNationalId() {
 		return nationalId;

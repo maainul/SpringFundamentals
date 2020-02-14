@@ -6,7 +6,7 @@
 
 	<bean id="patient"
 		class="com.mainul.spring.testspring.PatientTest.Patient"
-		scope="prototype">
+		scope="prototype" init-method="onCreate">
 	<constructor-arg value="5" name="id"></constructor-arg>
 	<constructor-arg value="Tom" name="nameString"></constructor-arg>
 	<property name="nationalId" value="1234"></property>
