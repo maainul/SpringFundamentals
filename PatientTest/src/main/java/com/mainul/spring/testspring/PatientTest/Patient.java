@@ -8,13 +8,20 @@ public class Patient {
 
 	private Address address;
 
-	public Address getAddress() {
-		return address;
-	}
 
 	public Patient() {
 
 	}
+	
+	public static Patient getInstance(int id, String nameString) {
+		System.out.println("Creating patient using factory method.");
+		return new Patient(123,"Molly");
+	}
+	
+	public Address getAddress() {
+		return address;
+	}
+
 	
 	public void onCreate() {
 		System.out.println("patient created :"+this);

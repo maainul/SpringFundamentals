@@ -7,7 +7,8 @@
 
 	<bean id="patient"
 		class="com.mainul.spring.testspring.PatientTest.Patient"
-		scope="singleton" init-method="onCreate" destroy-method="onDestroy">
+		scope="singleton" init-method="onCreate" destroy-method="onDestroy"
+		factory-method="getInstance">
 	<constructor-arg value="5" name="id"></constructor-arg>
 	<constructor-arg value="Tom" name="nameString"></constructor-arg>
 	<property name="nationalId" value="1234"></property>
