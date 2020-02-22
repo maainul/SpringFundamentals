@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-destroy-method="destroy" default-init-method="init">
+	default-destroy-method="destroy" default-init-method="init"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="patient"
@@ -30,6 +31,10 @@
 		class="com.mainul.spring.testspring.PatientTest.Address">
 	<constructor-arg name="streetString" value="Panthpath"></constructor-arg>
 	<constructor-arg name="postcodeString" value="1200"></constructor-arg>
+	</bean>
+	
+	<bean id="address2" class="com.mainul.spring.testspring.PatientTest.Address" p:streetString="Green Road" p:postcodeString="1210">
+	
 	</bean>
 	<bean
 		class="com.mainul.spring.testspring.PatientTest.PatientFactory"

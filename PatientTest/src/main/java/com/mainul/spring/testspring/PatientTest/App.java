@@ -12,10 +12,10 @@ public class App
     	Patient patient = (Patient)context.getBean("patient");
     	
     	
-    	
+    	Address address2 = (Address)context.getBean("address2");
     	
     	System.out.println(patient);
-    	
+    	System.out.println(address2);
     	
     	
     	((ClassPathXmlApplicationContext)context).close();
