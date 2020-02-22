@@ -15,7 +15,7 @@ public class Patient {
 	
 	public static Patient getInstance(int id, String nameString) {
 		System.out.println("Creating patient using factory method.");
-		return new Patient(123,"Molly");
+		return new Patient(id,nameString);
 	}
 	
 	public Address getAddress() {

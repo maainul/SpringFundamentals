@@ -12,7 +12,7 @@ public class App
     	Patient patient = (Patient)context.getBean("patient");
     	
     	
-
+    	
     	
     	System.out.println(patient);
     	
