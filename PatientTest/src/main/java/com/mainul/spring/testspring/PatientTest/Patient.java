@@ -1,49 +1,37 @@
 package com.mainul.spring.testspring.PatientTest;
 
+import java.util.List;
+
 public class Patient {
 
 	private int id;
 	private String nameString;
-	private int nationalId;
 
-	private Address address;
+	private List<String> emergencyContactName;
+	
+	public List<String> getEmergencyContactName() {
+		return emergencyContactName;
+	}
 
+	public void setEmergencyContactName(List<String> emergencyContactName) {
+		this.emergencyContactName = emergencyContactName;
+	}
+
+	@Override
+	public String toString() {
+		return "Patient [id=" + id + ", nameString=" + nameString + "]";
+	}
 
 	public Patient() {
 
 	}
-	
-	public static Patient getInstance(int id, String nameString) {
-		System.out.println("Creating patient using factory method.");
-		return new Patient(id,nameString);
-	}
-	
-	public Address getAddress() {
-		return address;
+
+	public void onCreate() {
+		System.out.println("patient created :" + this);
 	}
 
-	
-	public void onCreate() {
-		System.out.println("patient created :"+this);
-	}
-	
-	
 	public void onDestroy() {
 		System.out.println("patient destroyed");
-	}
-
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-
-	public int getNationalId() {
-		return nationalId;
-	}
-
-	public void setNationalId(int nationalId) {
-		this.nationalId = nationalId;
 	}
 
 	public Patient(int id, String nameString) {
@@ -65,12 +53,6 @@ public class Patient {
 
 	public void setNameString(String nameString) {
 		this.nameString = nameString;
-	}
-
-	@Override
-	public String toString() {
-		return "Patient [id=" + id + ", nameString=" + nameString + ", nationalId=" + nationalId + ", address="
-				+ address + "]";
 	}
 
 	public void speak() {

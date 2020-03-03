@@ -3,41 +3,25 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	default-destroy-method="destroy" default-init-method="init"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="patient"
 		class="com.mainul.spring.testspring.PatientTest.Patient"
-		scope="singleton" init-method="onCreate" destroy-method="onDestroy"
-		factory-method="getInstance">
-	<constructor-arg value="5" name="id"></constructor-arg>
-	<constructor-arg value="Tom" name="nameString"></constructor-arg>
-	<property name="nationalId" value="1234"></property>
-	<property name="address" ref="address"></property>
-	</bean>
-
-	<bean id="patient2"
-		class="com.mainul.spring.testspring.PatientTest.Patient"
-		scope="singleton" init-method="onCreate" destroy-method="onDestroy"
-		factory-method="createPatient" factory-bean="patientfactory">
-	<constructor-arg value="5" name="id"></constructor-arg>
-	<constructor-arg value="Molly" name="nameString"></constructor-arg>
-	<property name="nationalId" value="1234"></property>
-	<property name="address" ref="address"></property>
-	</bean>
+		scope="singleton" init-method="onCreate" destroy-method="onDestroy">
+		<constructor-arg value="5" name="id"></constructor-arg>
+		<constructor-arg value="Tom" name="nameString"></constructor-arg>
 
 
-	<bean id="address"
-		class="com.mainul.spring.testspring.PatientTest.Address">
-	<constructor-arg name="streetString" value="Panthpath"></constructor-arg>
-	<constructor-arg name="postcodeString" value="1200"></constructor-arg>
-	</bean>
-	
-	<bean id="address2" class="com.mainul.spring.testspring.PatientTest.Address" p:streetString="Green Road" p:postcodeString="1210">
-	
-	</bean>
-	<bean
-		class="com.mainul.spring.testspring.PatientTest.PatientFactory"
-		id="patientfactory">
+		<property name="emergencyContactName">
+			<list>
+				<value>Name 1</value>
+				<value>Name 2</value>
+				<value>Name 3</value>
+				<value>Name 4</value>
+				<value>Name 5</value>
+			</list>
+		</property>
 	</bean>
 </beans>
