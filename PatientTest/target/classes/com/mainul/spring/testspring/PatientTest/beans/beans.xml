@@ -8,19 +8,16 @@
 
 
 	<bean id="patient"
-		class="com.mainul.spring.testspring.PatientTest.Patient"
-		scope="singleton" init-method="onCreate" destroy-method="onDestroy">
-		<constructor-arg value="5" name="id"></constructor-arg>
-		<constructor-arg value="Tom" name="nameString"></constructor-arg>
-
-
-		<property name="emergencyContactName">
+		class="com.mainul.spring.testspring.PatientTest.Patient">
+		<property name="emergencyContactNames">
 			<list>
 				<value>Name 1</value>
 				<value>Name 2</value>
 				<value>Name 3</value>
 				<value>Name 4</value>
 				<value>Name 5</value>
+				<value>Name 6</value>
+
 			</list>
 		</property>
 	</bean>
